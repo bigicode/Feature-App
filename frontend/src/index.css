@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Poppins:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", "Segoe UI", sans-serif;
+  --font-display: "Fraunces", "Georgia", serif;
+
+  --color-sand-50: #f7f3ec;
+  --color-sand-100: #ece5d8;
+  --color-sand-200: #ddd9ce;
+  --color-sand-300: #cfc3b2;
+  --color-sand-400: #b59f87;
+
+  --color-clove-700: #6e5140;
+  --color-clove-800: #543729;
+  --color-clove-900: #3c2415;
+
+  --color-copper-500: #9b6741;
+  --color-moss-500: #5f725e;
+  --color-rosewood-500: #8b5b4d;
+
+  --shadow-card: 0 28px 70px -28px rgba(60, 36, 21, 0.34);
+  --shadow-soft: 0 18px 42px -24px rgba(60, 36, 21, 0.2);
+}
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(250, 245, 235, 0.95) 0%, rgba(250, 245, 235, 0) 34%),
+    radial-gradient(circle at 85% 12%, rgba(155, 103, 65, 0.16) 0%, rgba(155, 103, 65, 0) 24%),
+    linear-gradient(180deg, #f8f4ed 0%, #f2ece3 52%, #eae2d6 100%);
+  color: #3c2415;
+  font-family: var(--font-sans);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at center, black 36%, transparent 88%);
+  opacity: 0.22;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(60, 36, 21, 0.16);
+  color: #3c2415;
+}

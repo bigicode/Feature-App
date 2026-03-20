@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../backend/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum FeaturePriority {
+  LOW
+  MEDIUM
+  HIGH
+}
+
+enum ReviewStatus {
+  PENDING
+  ACCEPTED
+  DECLINED
+}
+
+enum DeliveryStatus {
+  BACKLOG
+  IN_PROGRESS
+  COMPLETED
+}
+
+model FeatureRequest {
+  id             Int             @id @default(autoincrement())
+  title          String          @db.VarChar(120)
+  description    String          @db.Text
+  priority       FeaturePriority @default(MEDIUM)
+  reviewStatus   ReviewStatus    @default(PENDING) @map("review_status")
+  deliveryStatus DeliveryStatus  @default(BACKLOG) @map("delivery_status")
+  submitterName  String?         @map("submitter_name") @db.VarChar(100)
+  submitterEmail String?         @map("submitter_email") @db.VarChar(191)
+  adminNotes     String?         @map("admin_notes") @db.Text
+  declinedReason String?         @map("declined_reason") @db.Text
+  reviewedAt     DateTime?       @map("reviewed_at") @db.DateTime(3)
+  createdAt      DateTime        @default(now()) @map("created_at") @db.DateTime(3)
+  updatedAt      DateTime        @updatedAt @map("updated_at") @db.DateTime(3)
+
+  @@map("feature_requests")
+  @@index([reviewStatus])
+  @@index([deliveryStatus])
+  @@index([priority])
+  @@index([createdAt])
+}
+
+model AdminUser {
+  id           Int      @id @default(autoincrement())
+  name         String   @db.VarChar(100)
+  email        String   @unique @db.VarChar(191)
+  passwordHash String   @map("password_hash") @db.VarChar(255)
+  createdAt    DateTime @default(now()) @map("created_at") @db.DateTime(3)
+  updatedAt    DateTime @updatedAt @map("updated_at") @db.DateTime(3)
+
+  @@map("admin_users")
+}
