@@ -39,7 +39,6 @@ It supports two main workflows:
 
 <p>
   <img src="./screenshoots/admin10.png" alt="Admin protected workspace" width="48%" />
-  <img src="./screenshoots/drop.png" alt="Custom dropdown UI" width="48%" />
 </p>
 
 ## Features
