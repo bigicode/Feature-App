@@ -34,7 +34,7 @@ INSERT INTO `admin_users` (`name`, `email`, `password_hash`)
 VALUES (
   'System Admin',
   'admin@featuretrack.local',
-  '$2b$10$KxEA7nhTauuFN2JqfE9Wf.bWub.Lq1oK2WaBqE3W5vqMoVYXSQUDa' Admin@12345
+  '$2b$10$KxEA7nhTauuFN2JqfE9Wf.bWub.Lq1oK2WaBqE3W5vqMoVYXSQUDa'
 )
 ON DUPLICATE KEY UPDATE
   `name` = VALUES(`name`),
