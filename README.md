@@ -6,6 +6,42 @@ It supports two main workflows:
 - public users can submit feature suggestions
 - admins can review, accept, decline, and manage approved requests through delivery
 
+## Screenshots
+
+### Public User Views
+
+<p>
+  <img src="./screenshoots/user1.png" alt="Public landing page" width="48%" />
+  <img src="./screenshoots/user2.png" alt="Public feature suggestion form" width="48%" />
+</p>
+
+### Admin Views
+
+<p>
+  <img src="./screenshoots/admin1.png" alt="Admin overview" width="48%" />
+  <img src="./screenshoots/admin2.png" alt="Admin request board" width="48%" />
+</p>
+
+<p>
+  <img src="./screenshoots/admin3.png" alt="Admin request details" width="48%" />
+  <img src="./screenshoots/admin4.png" alt="Admin management form" width="48%" />
+</p>
+
+<p>
+  <img src="./screenshoots/admin5.png" alt="Admin workflow view" width="48%" />
+  <img src="./screenshoots/admin7.png" alt="Admin delivery state view" width="48%" />
+</p>
+
+<p>
+  <img src="./screenshoots/admin8.png" alt="Admin request state view" width="48%" />
+  <img src="./screenshoots/admin9.png" alt="Admin detailed management page" width="48%" />
+</p>
+
+<p>
+  <img src="./screenshoots/admin10.png" alt="Admin protected workspace" width="48%" />
+  <img src="./screenshoots/drop.png" alt="Custom dropdown UI" width="48%" />
+</p>
+
 ## Features
 
 - Public feature suggestion form
@@ -184,6 +220,5 @@ Frontend typically runs on:
 - Generated Prisma client is stored in `backend/generated/prisma`
 - If you change the Prisma schema, run `npm run prisma:generate` again from `backend`
 - Real `.env` files should stay local and not be committed
-
 
 
