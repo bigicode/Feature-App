@@ -47,7 +47,7 @@ export function Footer() {
           </nav>
 
           <p className="text-sm text-clove-700">
-            {year} Feature Track. React, Express, Prisma, and MySQL.
+            {year} Feature Track is a full-stack feature request management application .
           </p>
         </div>
       </div>
